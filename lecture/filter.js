@@ -92,9 +92,8 @@ var heroes = [
 	{name: "Superman", franchise: "DC"}
 ];
 
-var marvelHeroes =  heroes.filter(function(hero) {
-	return hero.franchise == "Marvel";
-});
+var marvelHeroes = heroes.filter(hero => hero.franchise == "Marvel")
+
 console.log("marvelHeroes: ", marvelHeroes)
 /**
  * marvelHeroes:  [
@@ -114,5 +113,26 @@ Array.prototype.solution2 = function(num) {
     return this.join("").split("").filter(e => e == num).length;
 }
 
+let tar = [5, 15, 55, "515"] 
+
+function sol(arr, num) {
+    return arr.join("").split("").filter(e => e == num).length;
+}
+
+console.log(sol(tar, "5"))
+
+
 // 2. Write a function that accepts a string as its input, and returns the same string just with duplicate letters removed.
 // solution("Mississippi") === "Misp"
+
+function solution4(str) {
+    return str.split("").filter(
+        function(letter, index, array){
+            return array.indexOf(letter) == index;
+        }
+    ).join("");
+}
+
+function solution5(str) {
+    return str.split("").filter((e, i, arr) => arr.indexOf(e) == i).join("");
+}

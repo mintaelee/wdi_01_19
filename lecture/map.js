@@ -26,18 +26,19 @@ const sweeterArray = sweetArray.map(sweetItem => {
 })
 
 console.log(sweeterArray) // [4, 6, 8, 10, 70]
+// const sweeterArray = sweetArray.map(s => s * 2)
 
 // 2
 // create a function to use
 const makeSweeter = sweetItem => sweetItem * 2;
 
 // we have an array
-const sweetArray = [2, 3, 4, 5, 35];
+const sweetArray2 = [2, 3, 4, 5, 35];
 
 // call the function we made. more readable
-const sweeterArray = sweetArray.map(makeSweeter);
+const sweeterArray2 = sweetArray2.map(makeSweeter);
 
-console.log(sweeterArray); // [4, 6, 8, 10, 70]
+console.log(sweeterArray2); // [4, 6, 8, 10, 70]
 
 // 3
 // Converting a String to an Array
@@ -73,3 +74,4 @@ function solution1(str) {
         
     return reversed.join(" ");
 }
+console.assert(solution1("The quick brown fox") === "ehT kciuq nworb xof", "Error: failed!")
