@@ -102,6 +102,7 @@ function calculate(operator){
         }
         operated = true;
     }
+    empty = true;
 
 }
 
